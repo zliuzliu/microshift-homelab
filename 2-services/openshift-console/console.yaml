@@ -68,7 +68,7 @@ spec:
           allowPrivilegeEscalation: false
           capabilities:
             drop: ["ALL"]
-        image: quay.io/openshift/origin-console:4.12.0
+        image: quay.io/openshift/origin-console:4.14.0
         env:
         - name: BRIDGE_USER_AUTH
           value: disabled
@@ -104,6 +104,7 @@ metadata:
   name: openshift-console
   namespace: kube-system
 spec:
+  host: openshift-console-kube-system.apps.rhde.example.com
   to:
     kind: Service
     name: openshift-console-service
